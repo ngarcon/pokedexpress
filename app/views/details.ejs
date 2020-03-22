@@ -1,0 +1,85 @@
+<%- include('partials/header') %>
+
+<h2>Details de <%= pokemon.nom %></h2>
+<div class="detail-container">
+    <div class="detail-visual-container">
+        <div class="visual-container">
+            <img src="/img/<%= pokemon.numero %>.png" alt="Picture of <%= pokemon.nom %>">
+
+        </div>
+    </div><%# END .detail-visual-container %> 
+
+    <div class="stats-container">
+        <h3>#<%= pokemon.numero %> <%= pokemon.nom %> </h3>
+        <div class="type-container">
+            <% for( const type of pokemon.types) { %> 
+              <a href="/types/<%= type.id %>" class="type-label" style="background-color: #<%= type.color %>;"><%= type.name %></a>
+            <% } %> <%# END types.forEach %> 
+        </div><%# END type-container %> 
+
+        <h4>Statistiques</h4>
+
+        <table>
+            <tr class="stat-row">
+                <th class="stat-header">PV</th>
+                <td class="stat-values"><%= pokemon.pv %></td>
+                <td class="stat-jauge">
+                    <div class="empty-jauge">
+                        <div class="value-jauge" style="width:<%= pokemon.attaque_rate %>px;"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="stat-row">
+                <th class="stat-header">Attaque</th>
+                <td class="stat-values"><%= pokemon.attaque %></td>
+                <td class="stat-jauge">
+                    <div class="empty-jauge">
+                        <div class="value-jauge" style="width:<%= pokemon.attaque_rate %>px;"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="stat-row">
+                <th class="stat-header">Défense</th>
+                <td class="stat-values"><%= pokemon.defense %></td>
+                <td class="stat-jauge">
+                    <div class="empty-jauge">
+                        <div class="value-jauge" style="width:<%= pokemon.defense_rate %>px;"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="stat-row">
+                <th class="stat-header">Attaque Spé.</th>
+                <td class="stat-values"><%= pokemon.attaque_spe %></td>
+                <td class="stat-jauge">
+                    <div class="empty-jauge">
+                        <div class="value-jauge" style="width:<%= pokemon.attaque_spe_rate %>px;"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="stat-row">
+                <th class="stat-header">Défense Spé.</th>
+                <td class="stat-values"><%= pokemon.defense_spe %></td>
+                <td class="stat-jauge">
+                    <div class="empty-jauge">
+                        <div class="value-jauge" style="width:<%= pokemon.defense_spe_rate %>px;"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="stat-row">
+                <th class="stat-header">Vitesse</th>
+                <td class="stat-values"><%= pokemon.vitesse %></td>
+                <td class="stat-jauge">
+                    <div class="empty-jauge">
+                        <div class="value-jauge" style="width:<%= pokemon.vitesse_rate %>px;"></div>
+                    </div>
+                </td>
+            </tr>
+            
+        </table>
+    </div><%# END .stats-container %> 
+    
+</div><%# END .detail-container %> 
+
+<a class="back-to-list" href="/">Revenir à la liste</a>
+
+<%- include('partials/footer') %>

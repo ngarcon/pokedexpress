@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<% if (locals.types) { %> 
+    <ul class="type-list">
+        <% for(let type of types){ %>
+            <li>
+                <a class="details-link" href="/types/<%= type.id %>">
+                    <article class="type-card" style ="background-color: #<%= type.color %>;">
+                        <%= type.name %>
+                    </article>
+                </a>
+            </li>
+
+        <% } %><%# END for(let type of types){ %> 
+    </ul>
+
+<% } %> <%# END if(locals.type) %>
+
+<a class="back-to-list" href="/">Revenir à la liste</a>
+
+<%- include('partials/footer') %>

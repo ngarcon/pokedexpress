@@ -1,0 +1,224 @@
+body {
+    background-color: #C14040;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding:0;
+    font-size: 1.5rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    width: 1000px; 
+    margin: auto; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+.container>header {
+    background-color: white;
+    color: #C14040;
+    padding: 0.8rem;
+    border-radius: 1rem;
+}
+
+.header-nav {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav--links {
+    list-style: none; 
+    padding:0;
+    margin:0;
+}
+.header-nav li {
+    display: inline-block;
+}
+
+.header-nav a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-nav--links {
+    font-size: 1.2rem;
+}
+
+/* LIST DISPLAY */
+
+.pokemon-list {
+    display: flex; 
+    flex-wrap: wrap;
+    list-style: none; 
+    padding:0;
+    margin:0;
+}
+
+
+/* CARD LIST DISPLAY */
+
+
+.pokemon-card {
+    width: 300px; 
+    height: 300px; 
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.visual-container {
+    width:80%;
+    flex:1; 
+    padding: 0.5rem;
+}
+
+.pokemon-label {
+    text-align: center;
+}
+
+.details-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* POKEMON DETAILS */
+/* Settings */ 
+
+.detail-container {
+    display: flex;
+}
+
+.details-visual-container {
+    flex:3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem
+}
+
+.stats-container {
+    flex:4;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* DETAILS HEADER */
+
+/*  */
+
+.type-label {
+    display: inline-block;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    text-decoration: none;
+    color: white;
+}
+
+.type-label:hover {
+    transform: scale("1.3");
+}
+
+/* STATS TABLE */
+
+table {
+    width:100%
+}
+
+.stat-row {
+    display:flex;
+    justify-content: space-between;
+    width:100%
+}
+
+.stat-header {
+    flex:2;
+    text-align: left;
+}
+
+.stat-values {
+    flex:1;
+}
+
+.stat-jauge {
+    flex:5;
+}
+
+
+.empty-jauge {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.4rem;
+    height: 1.5rem;
+    margin-bottom: 0.2em; 
+    width: 100%; 
+    overflow: hidden;
+}
+
+.value-jauge {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    bottom: 0; 
+}
+
+/* RETOUR */
+
+.back-to-list {
+    padding: 1em; 
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* TYPE PAGE */
+
+.type-list {
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none; 
+    padding:0;
+    margin:0;
+}
+
+
+.type-card {
+    width: 300px; 
+    background-color: rgba(0, 0, 0, 0.2);
+    padding:1em;
+    margin: 0.3rem;
+    display: inline-block; 
+    flex-direction: column; 
+    align-items: center;
+    border-radius: 0.3rem;
+    text-align: center;
+}
+
+.details-link {
+    display: block; 
+}
+

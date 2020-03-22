@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+<ul class="pokemon-list">
+
+<% if (locals.pokemons.length != 0) { %> 
+        <% for(let pokemon of pokemons){ %>
+            <li >
+                <a class="details-link"href="/pokemon/<%= pokemon.id %>">
+                    <article class="pokemon-card">
+                        <div class="visual-container">
+                            <img src="/img/<%= pokemon.numero %>.png" alt="Picture of <%= pokemon.nom %>">
+                        </div>
+                        <p class="pokemon-label">
+                            #<%= pokemon.numero %> <%= pokemon.nom %>
+                        </p>
+                    </article>
+                </a>
+            </li>
+
+        <% } %><%# END for(let pokemon of pokemons){ %> 
+            
+<% } else {%> <%# ELSE  if(locals.pokemon) %>
+        
+    <li >
+        <a class="details-link" href="/pokemon/<%= pokemon.id %>">
+            <article class="pokemon-card">
+                <div class="visual-container">
+                    
+                </div>
+                <p class="pokemon-label">
+                    #? Pas de Pokémon
+                </p>
+            </article>
+        </a>
+    </li>
+
+<% } %><%# END for(let pokemon of pokemons){ %> 
+</ul>
+
+<%- include('partials/footer') %>
